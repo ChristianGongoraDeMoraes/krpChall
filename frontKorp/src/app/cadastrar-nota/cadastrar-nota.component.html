@@ -1,0 +1,45 @@
+<div class="page">
+    <div class="container">
+        <div class="cards">
+            <h1 routerLink="/cadastrarProduto">Estoque </h1>
+            <div class="card" *ngFor="let produto of produtos; let i=index">
+                <p>
+                    Produto : {{ produto.nome }}
+                </p>
+                <p>
+                    Preco : {{ produto.preco.toFixed(2) }} R$
+                </p>
+                <p>
+                    Quantidade : {{ produto.quantidadeEmEstoque }}
+                </p>
+                <button class="AddNotaBtn" (click)="addNota(produto.nome, produto.preco)">
+                    <mat-icon>
+                    add
+                    </mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class="nota">
+            <h1 routerLink="/imprimirNota">Nota</h1>
+            <div class="produtosNota">
+                <div class="divNumeracao">
+                    <input class="numeracao" id="numeracao" [(ngModel)]="numeracaoNota" name="numeracao" placeholder="Numeracao Nota">
+                    <button class="btnSalvarNota" (click)="salvarNota()">
+                        Save 
+                        <mat-icon>
+                        save
+                        </mat-icon>
+                    </button>
+                </div>
+                <div class="card" *ngFor="let produto of produtosNota; let i=index">
+                    <p>
+                        Produto : {{ produto.nome }}
+                    </p>
+                    <p>
+                        Preco : {{ produto.preco }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

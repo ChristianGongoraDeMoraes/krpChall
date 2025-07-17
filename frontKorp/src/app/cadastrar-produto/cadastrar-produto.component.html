@@ -1,0 +1,23 @@
+<div class="page">
+    <div class="container">
+        <div class="card">
+            <h1>Cadastrar Produto</h1>
+            <input id="nome" [(ngModel)]="nome" name="nome" placeholder="nome">
+            <input id="preco" [(ngModel)]="preco" name="preco" placeholder="preco">
+            <input id="quantidadeEmEstoque" [(ngModel)]="quantidadeEmEstoque" name="quantidadeEmEstoque" placeholder="quantidadeEmEstoque">
+            <button class="btnSalvar" (click)="salvarProduto()">
+                Save 
+                <mat-icon>
+                save
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<button class="backButton" routerLink="/">
+    <mat-icon>
+        arrow_back
+    </mat-icon>
+</button>

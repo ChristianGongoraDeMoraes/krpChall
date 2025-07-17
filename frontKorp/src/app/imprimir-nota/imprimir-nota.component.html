@@ -1,0 +1,56 @@
+<div class="page">
+    <div class="container">
+        <div class="notasTrue">
+            <h1>Notas Abertas</h1>
+            <div class="nota" *ngFor="let nota of notas; let i=index">
+                 <div *ngIf="nota.status">
+                     <div class="card">
+                        <p>
+                              Numeração: {{ nota.numeracao }}
+                        </p>
+                        <div *ngFor="let produto of nota.produtos; let i=index">
+                             <li>
+                                 {{ produto.nome }} , R${{ produto.preco.toFixed(2) }}
+                             </li>
+                        </div>
+                        <p>
+                            Total : {{ totalNota(nota.produtos) }}
+                        </p>
+         
+                         <button class="btnImprimir" (click)="imprimir(nota.numeracao)">
+                             <mat-icon>
+                                print
+                             </mat-icon>
+                         </button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="notasFalse">
+            <h1>Notas Fechadas</h1>
+            <div class="nota" *ngFor="let nota of notas; let i=index">
+                <div *ngIf="!nota.status">
+                    <div class="card">
+                        <p>
+                            Numeração : {{ nota.numeracao }}
+                        </p>
+                        <div *ngFor="let produto of nota.produtos; let i=index">
+                            <li>
+                                    {{ produto.nome }} , R${{ produto.preco.toFixed(2) }}
+                            </li>
+                        </div>
+                        <p>
+                            Total : {{ totalNota(nota.produtos) }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="backButton" routerLink="/">
+    <mat-icon>
+        arrow_back
+    </mat-icon>
+</button>
