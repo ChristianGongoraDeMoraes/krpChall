@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CyiHrEVQGnFZhP+J5ziJQ9cBq08G8wZBAevL3cQAYRY=",
+  "Source": "apiProdutosKorp",
+  "BasePath": "_content/apiProdutosKorp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

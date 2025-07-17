@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "vwhMmCNws5ENZuS77Z4olQWj6bX2edYo8obTxvs2kJc=",
+  "Source": "apiNotaFiscalKrp",
+  "BasePath": "_content/apiNotaFiscalKrp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
